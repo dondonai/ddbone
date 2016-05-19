@@ -1,0 +1,47 @@
+.site-header {
+	> .wrap {
+		padding: 40px 0;
+	}
+}
+
+.title-area {
+	float: left;
+	padding: 10px 0;
+	width: 360px;
+}
+
+.site-title {
+	margin-bottom: 0;
+	a {
+		font-size: 2em;
+		font-weight: 400;
+		line-height: 1.2;
+		&:hover,
+		&:focus {
+		}
+	}
+	.header-image & {
+		display: block;
+		text-indent: -9999px;
+		a {
+			background: url(../images/logo.png) no-repeat left;
+			float: left;
+			min-height: 60px;
+			width: 100%;
+		}
+	}
+}
+
+.site-description {
+	@extend .site-title;
+	font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.header-widget-area {
+	float: right;
+
+	.widget {
+	}
+}

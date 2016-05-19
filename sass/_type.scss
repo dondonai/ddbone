@@ -1,0 +1,68 @@
+html,
+body {
+	min-width: $site-width; // Prevents backgrounds on these elements from being truncated on smaller screens on fixed-width sites
+}
+
+body {
+	background-color: #f5f5f5;
+	color: #333;
+	font-family: $sans;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	font-variant-ligatures: common-ligatures;
+}
+
+::selection {
+	// text-shadow: none;
+}
+
+a {
+	text-decoration: underline;
+	transition: all .1s ease-in-out;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+ol,
+ul {
+	@extend %unstyled-list;
+}
+
+p {
+	margin: 0;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+abbr {
+	letter-spacing: .1em;
+}
+
+pre {
+	overflow: scroll;
+	white-space: pre;
+}
+
+code {
+	overflow: hidden;
+	word-wrap: break-word;
+}
+
+iframe {
+	border: none;
+}
+
+hr {
+	clear: both;
+	margin: $spacer 0;
+	border: 0;
+	border-collapse: collapse;
+	border-top: 1px solid $grey;
+}

@@ -1,0 +1,104 @@
+.entry {
+	margin-bottom: 40px;
+	padding: 50px 60px;
+	.content & {
+		background-color: #fff;
+	}
+}
+
+.breadcrumbs {
+}
+
+.entry-title {
+	overflow: hidden;
+	word-wrap: break-word;
+
+	a {
+		color: inherit;
+
+		&:hover,
+		&:focus,
+		&:active {
+		}
+	}
+}
+
+.entry-content {
+	p {
+		@extend %type;
+	}
+
+	ol,
+	ul {
+		@extend %type;
+		overflow: hidden;
+		padding-left: 2.5em;
+
+		ol,
+		ul {
+			margin-bottom: .5em;
+			padding-left: 1.5em;
+		}
+	}
+
+	ol {
+		li {
+			list-style-type: decimal;
+		}
+	}
+
+	ul {
+		li {
+			list-style-type: disc;
+		}
+	}
+
+	blockquote {
+		margin: 0;
+
+		p {
+		}
+	}
+
+	table {
+		margin-bottom: 1.5em;
+	}
+}
+
+.more-link {
+	position: relative;
+	white-space: nowrap;
+}
+
+.entry-pagination {
+	@extend %type;
+}
+
+.entry-meta {
+	clear: both;
+
+	.entry-header & {
+	}
+
+	.entry-footer & {
+	}
+
+	.entry-categories,
+	.entry-tags {
+	}
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}

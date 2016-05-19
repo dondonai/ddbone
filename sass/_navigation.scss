@@ -1,0 +1,91 @@
+.genesis-nav-menu {
+	@extend %clearfix;
+	clear: both;
+	font-size: 1em;
+	width: 100%;
+
+	// Applied to all menu <li>s
+	.menu-item {
+		a {
+			color: #333;
+			font-weight: 700;
+			text-decoration: none;
+			display: block;
+			padding: 30px 24px;
+			position: relative;
+			text-decoration: none;;
+			&:hover,
+			&:focus {
+				color: #c3251d;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	// First level
+	> .menu-item {
+		color: #fff;
+		position: relative;
+		display: inline-block;
+		float: left;
+		text-align: left;
+
+		&:hover,
+		&:focus {
+			> .sub-menu {
+				left: auto;
+				opacity: 1;
+			}
+		}
+
+		&.current-menu-item {
+			> a {
+				@extend a:hover;
+			}
+		}
+
+		> a {
+		}
+	}
+
+	// Sublevels
+	.sub-menu {
+		position: absolute;
+		top: 100%;
+		left: -9999px;
+		z-index: 999;
+		opacity: 0;
+		transition: opacity .4s ease-in-out;
+		white-space: nowrap;
+
+		> .menu-item {
+			border: 1px solid #eee;
+			border-top: none;
+			> a {
+				background: #fff;
+				color: #333;
+				padding: 20px;
+				position: relative;
+			}
+		}
+
+		.sub-menu {
+		}
+	}
+}
+.nav-primary {
+	background-color: #333;
+	.menu-item {
+		a {
+			@extend a;
+			color: #ccc;
+			padding: 20px;
+			&:hover {
+				@extend a:hover;
+			}
+		}
+		&.current-menu-item {
+			@extend a:hover;
+		}
+	}
+}

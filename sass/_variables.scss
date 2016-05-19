@@ -1,0 +1,39 @@
+/*********************
+SIZES
+*********************/
+$spacer: 1.5em;
+// $site-width: 60em; // Useful for fixed width sites, as well as for limiting the max-width of fluid sites
+$site-width: 75em;
+
+/*********************
+BREAKPOINTS
+*********************/
+// Use pixels for include-media-export compatibility. 'zero' breakpoint ensures the breakpoints are printed on all screen widths.
+$breakpoints: ( zero: (1 * 16px), phone: (35 * 16px), portrait: (48 * 16px), landscape: (64 * 16px), desktop: (80 * 16px) );
+
+/*********************
+COLORS
+*********************/
+$grey: $gray;
+
+/*********************
+SOCIAL COLORS - http://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
+*********************/
+$twitter: #00aced;
+$facebook: #3b5998;
+$linkedin: #007bb6;
+$google: #dd4b39;
+$youtube: #b00;
+$pinterest: #cb2027;
+$tumblr: #32506d;
+$flickr: #ff0084;
+$instagram: #517fa4;
+$vimeo: #aad450;
+$foursquare: #0072b1;
+$rss: #f60;
+
+/*********************
+TYPOGRAPHY - http://cssfontstack.com/
+*********************/
+// https://medium.com/@mwichary/system-shock-6b1dc6d6596f
+$sans: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;

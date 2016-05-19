@@ -1,0 +1,35 @@
+// Genesis layout <body> classes:
+// .content-sidebar-sidebar
+// .sidebar-content-sidebar
+// .sidebar-sidebar-content
+// .content-sidebar
+// .sidebar-content
+// .full-width-content
+
+.site-container {
+}
+
+.site-inner {
+	clear: both;
+	padding-top: 40px;
+}
+.site-inner, .wrap {
+	@extend %wrap;
+}
+.content-sidebar-wrap {
+	@extend %clearfix;
+}
+
+.content {
+	float: left;
+	width: $site-width - 25;
+}
+
+.sidebar-primary {
+	float: right;
+	width: $site-width - 52.5;
+}
+
+.sidebar-secondary {
+	@extend .sidebar-primary;
+}
