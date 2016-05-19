@@ -25,9 +25,9 @@ grunt
 - Display database query info in your footer
 - Put the site in maintenance mode for non-admins
 - Grunt:
- - Automatic JS concatenation 
+ - Automatic JS concatenation
  - Automatic JS minification (Uglify)
- - Automatic image optimization (JPEG, PNG, GIF) 
+ - Automatic image optimization (JPEG, PNG, GIF)
  - SASS & Compass support
  - [Autoprefixer](https://github.com/ai/autoprefixer) and CSS minification support
  - Watches for file changes, and notifies on error
@@ -60,7 +60,7 @@ grunt
 - Supports an IE-only stylesheet
 - Support the IE6 Universal Stylesheet
 - Supports enqueuing Google Fonts (template, disabled by default)
-- Enqueue jQuery from Google's CDN, with fallback to a local copy. 
+- Enqueue jQuery from Google's CDN, with fallback to a local copy.
 - Enqueue custom scripts
 - Specify custom favicon location (template, disabled by default)
 - Add a 'no-js' class to `<body>`
@@ -139,7 +139,7 @@ grunt
 ### 2.3.30 (April 26, 2016)
 - Add archive SCSS template
 - Enable JS source maps
-- Add `bfg_remove_meta_boxes` - partially disabled by default 
+- Add `bfg_remove_meta_boxes` - partially disabled by default
 - Remove the Genesis user meta boxes - disabled by default
 
 ### 2.3.29 (April 3, 2016)
@@ -173,7 +173,7 @@ grunt
 - Use `.form-table` for admin options
 - Disable the 'Open Sans' loaded by the admin bar
 - Add option to remove the Genesis 'Layout Settings' meta box for terms (Disabled by default)
-- Use [include-media](https://github.com/eduardoboucas/include-media) and [include-media-export](https://github.com/eduardoboucas/include-media-export) to unify SCSS and JS breakpoints 
+- Use [include-media](https://github.com/eduardoboucas/include-media) and [include-media-export](https://github.com/eduardoboucas/include-media-export) to unify SCSS and JS breakpoints
 
 ### 2.3.22 (November 22, 2015)
 - CSS tweaks
@@ -202,7 +202,7 @@ grunt
 - Accessibility updates for Genesis 2.2
 - Other CSS tweaks
 - Remove Gravity Forms-specific JS + CSS
-- Check for `window.addEventListener` before running `bfg_disable_pointer_events_on_scroll()`, for better IE8 compatibility 
+- Check for `window.addEventListener` before running `bfg_disable_pointer_events_on_scroll()`, for better IE8 compatibility
 - Remove unnecessary role attributes
 
 ### 2.3.16 (August 19, 2015)
@@ -378,7 +378,7 @@ grunt
 
 ### 2.2.14 (July 11, 2014)
 - Set all package versions in `package.json` to `*`, so that NPM will download the latest versions, then update the file with that info, on `npm update --save-dev`
-- Set Bower to always pull the latest versions of its dependencies 
+- Set Bower to always pull the latest versions of its dependencies
 - Removed `grunt-svgmin`, since `grunt-contrib-imagemin` now supports SVGs
 - Added `grunt-newer`, so that only changed images will be optimized when Grunt is watching for changes
 - No longer create a `style.prefixed.css` file. Replace `style.css` with the prefixed version
@@ -617,3 +617,4 @@ grunt
 
 ### v2.0 (June 9, 2013)
 - Initial release of Genesis 2.0 BFG fork
+=======
