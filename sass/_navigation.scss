@@ -2,7 +2,7 @@
 	@extend %clearfix;
 	clear: both;
 	font-family: $sans;
-	font-size: 1em;
+	font-size: .75em;
 	width: 100%;
 
 	// Applied to all menu <li>s
@@ -12,7 +12,7 @@
 			font-weight: 400;
 			text-decoration: none;
 			display: block;
-			padding: 30px 24px;
+			padding: .625em 1.2em;
 			position: relative;
 			text-transform: uppercase;
 			&:hover,
@@ -57,6 +57,12 @@
 	    right: -5px;
 	    font-size: .1em;
 		}
+		&:last-child {
+			&::after {
+				// @extend &::after;
+				content: "";
+			}
+		}
 	}
 
 	// Sublevels
@@ -75,10 +81,10 @@
 			position: relative;
 			> a {
 				color: lighten($text, 100%);
-				font-size: .75em;
-				padding: .625em 0.938em;
+				font-size: 1em;
+				padding: 1em 1.5em;
 				position: relative;
-				text-transform: uppercase;
+				text-transform: capitalize;
 				&:hover,
 				&:focus {
 					@extend a:hover;
@@ -105,13 +111,33 @@
 		a {
 			@extend a;
 			// color: lighten($text, 40%);
-			padding: .625em 1.2em;
+			// padding: .625em 1.2em;
+			font-size: 1.3em;
+			text-transform: capitalize;
 			&:hover {
 				@extend a:hover;
 			}
 		}
 		&.current-menu-item {
 			@extend a:hover;
+		}
+	}
+}
+
+.nav-secondary {
+
+}
+
+.header-widget-area {
+	.genesis-nav-menu {
+		> .menu-item {
+			&::after {
+				@extend .menu-item::after;
+				top: 30%;
+			}
+			a {
+				text-transform: uppercase;
+			}
 		}
 	}
 }
