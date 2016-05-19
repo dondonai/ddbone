@@ -122,6 +122,38 @@ function bfg_next_link_text( $text ) {
 add_filter( 'edit_post_link', '__return_false' );
 
 /*
+ * Display the contact details of the author
+ *
+ * @since 2.0.18
+ */
+
+ add_action( 'genesis_before_comments', 'bfg_author_box' );
+ function bfg_author_box() {
+
+	 $facebook = get_the_author_meta('facebook');
+	 $twitter = get_the_author_meta('twitter');
+	 $linkedin = get_the_author_meta('linkedin');
+
+	 echo '<div class="author__contact"><ul class="contact--details">';
+	 if( $facebook ) {
+		 printf('<li class="facebook"><a href="%s"><span class="fa fa-facebook-square"></span> Facebook</a></li>', $facebook );
+	 }
+	 if( $twitter ) {
+		 printf('<li class="twitter"><a href="%s"><span class="fa fa-twitter-square"></span> Twitter</a></li>', $twitter );
+	 }
+	 if( $linkedin ) {
+		 printf('<li class="linkedin"><a href="%s"><span class="fa fa-linkedin-square"></span> Linkedin</a></li>', $linkedin );
+	 }
+
+
+	 echo '</ul></div>';
+
+		// printf( '<div class="author__contact--details">Connect with me: %s %s %s</div>', $facebook, $twitter, $linkedin );
+
+ }
+
+
+/*
  * Hide the author box
  *
  * @since 2.0.18

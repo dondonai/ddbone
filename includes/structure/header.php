@@ -132,7 +132,11 @@ function bfg_load_assets() {
 	);
 	// wp_localize_script( 'bfg', 'ajax_object', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 	// Add FontAwesome icons set
-	wp_enqueue_script( 'FontAwesome', 'https://use.fontawesome.com/c727f77d1f.js', array(), null, false);
+	wp_enqueue_style(
+		'FontAwesome',
+		'https://use.fontawesome.com/c727f77d1f.css', 
+		array(),
+		null);
 
 }
 
