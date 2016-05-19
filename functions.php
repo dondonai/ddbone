@@ -6,9 +6,9 @@ if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 require_once get_template_directory() . '/lib/init.php';
 
 // Child theme definitions
-define( 'CHILD_THEME_NAME', 'Caylum Institute Members' );
-define( 'CHILD_THEME_URL', 'http://members.cayluminstitute.com/' );
-define( 'CHILD_THEME_TEXT_DOMAIN', 'caymem' );
+define( 'CHILD_THEME_NAME', 'Bones for Genesis 2.0' );
+define( 'CHILD_THEME_URL', 'https://github.com/dondonai/ddbone' );
+define( 'CHILD_THEME_TEXT_DOMAIN', 'ddbone' );
 
 // Developer Tools
 require_once CHILD_DIR . '/includes/developer-tools.php';		// DO NOT USE THESE ON A LIVE SITE

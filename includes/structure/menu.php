@@ -21,7 +21,7 @@ function bfg_limit_menu_depth( $args ) {
 	if( !in_array($args['theme_location'], array('primary', 'secondary'), true) )
 		return $args;
 
-	$args['depth'] = 2;
+	$args['depth'] = 4;
 
 	return $args;
 

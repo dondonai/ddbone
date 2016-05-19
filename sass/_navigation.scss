@@ -1,30 +1,31 @@
 .genesis-nav-menu {
 	@extend %clearfix;
 	clear: both;
+	font-family: $sans;
 	font-size: 1em;
 	width: 100%;
 
 	// Applied to all menu <li>s
 	.menu-item {
 		a {
-			color: #333;
-			font-weight: 700;
+			color: $text;
+			font-weight: 400;
 			text-decoration: none;
 			display: block;
 			padding: 30px 24px;
 			position: relative;
-			text-decoration: none;;
+			text-transform: uppercase;
 			&:hover,
 			&:focus {
-				color: #c3251d;
-				text-decoration: underline;
+				color: $secondaryColor;
+				// box-shadow: 0 -2px 0 0 $masterColor inset;
 			}
 		}
 	}
 
 	// First level
 	> .menu-item {
-		color: #fff;
+		color: $text;
 		position: relative;
 		display: inline-block;
 		float: left;
@@ -41,10 +42,20 @@
 		&.current-menu-item {
 			> a {
 				@extend a:hover;
+				box-shadow: 0 -2px 0 0 $masterColor inset;
 			}
 		}
 
 		> a {
+		}
+		&::after {
+			content: "\f111";
+			color: $secondaryColor;
+			font-family: fontawesome;
+			position: absolute;
+	    top: 36%;
+	    right: -5px;
+	    font-size: .1em;
 		}
 	}
 
@@ -59,27 +70,42 @@
 		white-space: nowrap;
 
 		> .menu-item {
-			border: 1px solid #eee;
-			border-top: none;
+			background: $text;
+			border-bottom: 1px solid darken($text, 10%);
+			position: relative;
 			> a {
-				background: #fff;
-				color: #333;
-				padding: 20px;
+				color: lighten($text, 100%);
+				font-size: .75em;
+				padding: .625em 0.938em;
 				position: relative;
+				text-transform: uppercase;
+				&:hover,
+				&:focus {
+					@extend a:hover;
+					background: $secondaryColor;
+					color: $text;
+				}
 			}
-		}
-
-		.sub-menu {
+			&:last-child {
+				border: none;
+			}
+			&:hover {
+				> .sub-menu {
+					left: 99.7%;
+					opacity: 1;
+					top: 0;
+				}
+			}
 		}
 	}
 }
 .nav-primary {
-	background-color: #333;
+	background-color: $section;
 	.menu-item {
 		a {
 			@extend a;
-			color: #ccc;
-			padding: 20px;
+			// color: lighten($text, 40%);
+			padding: .625em 1.2em;
 			&:hover {
 				@extend a:hover;
 			}
