@@ -1,0 +1,51 @@
+.author-box {
+  @extend .entry;
+  img {
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  .author-box-title {
+    font-size: $spacer;
+    margin-bottom: $tenpx;
+  }
+  .author-box-content {
+
+  }
+}
+
+.author__contact {
+  margin-top: $spacer;
+  // .contact--details {
+    .social {
+      display: inline-block;
+      a {
+        color: lighten($text, 100%);
+        font-size: .8em;
+        font-weight: 700;
+        padding: $tenpx / 2 $tenpx;
+        text-decoration: none;
+        text-transform: capitalize;
+      }
+    }
+    .facebook {
+      a {
+        background-color: $facebook;
+      }
+    }
+    .twitter {
+      a {
+        background-color: $twitter;
+      }
+    }
+    .linkedin {
+      a {
+        background-color: $linkedin;
+      }
+    }
+    > span {
+      float: left;
+      margin-right: $tenpx;
+    }
+  // }
+}
