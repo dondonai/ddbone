@@ -26,6 +26,10 @@
 	.form-submit {
 		@extend %clearfix;
 	}
+	.comment-reply-title {
+		font-size: 1.2em;
+		margin-bottom: $tenpx;
+	}
 }
 
 .comment-notes,

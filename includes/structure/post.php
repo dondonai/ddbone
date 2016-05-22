@@ -126,7 +126,7 @@ add_filter( 'edit_post_link', '__return_false' );
  *
  * @since 2.0.18
  */
-// add_filter( 'get_the_author_genesis_author_box_single', '__return_false' );
+add_filter( 'get_the_author_genesis_author_box_single', '__return_false' );
 // add_filter( 'get_the_author_genesis_author_box_archive', '__return_false' );
 
 /*

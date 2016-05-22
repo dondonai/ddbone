@@ -43,6 +43,26 @@
         background-color: $linkedin;
       }
     }
+    .google {
+      a {
+        background-color: $google;
+      }
+    }
+    .youtube {
+      a {
+        background-color: $youtube;
+      }
+    }
+    .rss {
+      a {
+        background-color: $rss;
+      }
+    }
+    .instagram {
+      a {
+        background-color: $instagram;
+      }
+    }
     > span {
       float: left;
       margin-right: $tenpx;

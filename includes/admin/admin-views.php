@@ -186,6 +186,10 @@ function bfg_user_contactmethods( $fields ) {
 	$fields['facebook'] = 'Facebook';												// Add Facebook
 	$fields['twitter'] = 'Twitter';												// Add Twitter
 	$fields['linkedin'] = 'LinkedIn';												// Add LinkedIn
+	$fields['google'] = 'Google+';												// Add Google+
+	$fields['youtube'] = 'Youtube';												// Add Youtube
+	$fields['rss'] = 'RSS';												// Add RSS
+	$fields['instagram'] = 'Instagram';												// Add Instagram
 	unset( $fields['aim'] );														// Remove AIM
 	unset( $fields['yim'] );														// Remove Yahoo IM
 	unset( $fields['jabber'] );														// Remove Jabber / Google Talk
