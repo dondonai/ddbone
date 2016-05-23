@@ -1,20 +1,27 @@
 .author-box {
   @extend .entry;
+  color: lighten($text, 50%);
+  font-family: $OpenSans;
   img {
-    float: left;
-    margin-right: 10px;
+    display: block;
     border-radius: 50%;
+    margin: 0 auto $spacer;
   }
   .author-box-title {
     font-size: $spacer;
+    font-weight: 300;
     margin-bottom: $tenpx;
+    text-align: center;
   }
   .author-box-content {
-
+    border-top: 1px solid lighten($text, 50%);
+    padding-top: $spacer;
+    text-align: center;
   }
 }
 
 .author__contact {
+  @extend %clearfix;
   margin-top: $spacer;
   // .contact--details {
     .social {

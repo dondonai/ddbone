@@ -11,8 +11,8 @@ if( !defined('ABSPATH' ) ) exit; // Exit if accessed directly
 add_action( 'genesis_before_comments', 'bfg_author_box' );
 function bfg_author_box() {
 
-    $firstname = get_the_author_meta('firstname');
-    $lastname = get_the_author_meta('lastname');
+    $firstname = get_the_author_meta('first_name');
+    $lastname = get_the_author_meta('last_name');
     $displayname = get_the_author_meta('display_name');
     $description = get_the_author_meta('description');
     $email = get_the_author_meta('user_email');
@@ -31,10 +31,10 @@ function bfg_author_box() {
       echo get_avatar( $email, 100);
 
       if( $firstname && $lastname ) {
-        printf('<h4 class="author-box-title">About %s %s</h4>', $firstname, $lastname);
+        printf('<h4 class="author-box-title">%s %s</h4>', $firstname, $lastname);
       }
       else {
-        printf('<h4 class="author-box-title">About %s</h4>', $displayname);
+        printf('<h4 class="author-box-title">%s</h4>', $displayname);
       }
 
       printf('<div class="author-box-content">%s</div>', $description);
@@ -59,7 +59,7 @@ function bfg_author_box() {
           printf('<li class="social rss"><a href="%s"><span class="fa fa-rss-square"></span> RSS</a></li>', $rss );
         }
         if( $instagram ) {
-          printf('<li class="social instagram"><a href="%s"><span class="fa fa-instagram"></span> Linkedin</a></li>', $instagram );
+          printf('<li class="social instagram"><a href="%s"><span class="fa fa-instagram"></span> Instagram</a></li>', $instagram );
         }
       echo '</ul></div>';
 
