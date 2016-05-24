@@ -148,3 +148,12 @@ function bfg_password_form( $post = 0 ) {
 	return $output;
 
 }
+
+
+
+// Customize the entry meta in the entry header (requires HTML5 theme support)
+add_filter( 'genesis_post_info', 'bfg_post_info_filter' );
+function bfg_post_info_filter($post_info) {
+	$post_info = '[post_author_posts_link] [post_date] &middot; [post_comments] [post_edit]';
+	return $post_info;
+}
