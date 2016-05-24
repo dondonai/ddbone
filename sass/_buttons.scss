@@ -1,5 +1,9 @@
 .btn {
+	background: $secondaryColor;
+	padding: $tenpx 0.938em;
+	color: #fff;
 	display: inline-block;
+	font-family: $Lato;
 	width: auto;
 	border: none;
 	border-radius: 0;
@@ -13,5 +17,7 @@
 
 	&:hover,
 	&:focus {
+		background-color: lighten($secondaryColor, 10%);
+		color: $text;
 	}
 }

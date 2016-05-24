@@ -1,34 +1,114 @@
 .comment-list {
 	.comment {
+		margin-bottom: $spacer;
 		> article {
 		}
 	}
 
 	.children {
+		background-color: lighten($text, 70%);
+		margin-top: $spacer;
+		padding: $spacer;
+		.comment-content {
+			background-color: lighten($text, 100%);
+			&::before {
+				color: lighten($text, 100%);
+			}
+		}
+		.comment-author {
+			// color: lighten($text, 100%);
+		}
 	}
 }
 
 .comment-header {
+	position: relative;
 	@extend %clearfix;
 
 	.comment-author {
+		color: $secondaryColor;
+		float: left;
+		font-size: .8em;
+		margin-right: $spacer;
+		text-align: center;
+		text-transform: capitalize;
+		.says {
+			text-transform: lowercase;
+		}
 	}
 
 	img {
+		// border: 2px solid $masterColor;
+		border-radius: 50%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.comment-meta {
+		float: right;
+		a {
+			color: $secondaryColor;
+			font-size: .8em;
+			text-decoration: none;
+			&::before {
+				content: '\f073';
+				font-family: fontawesome;
+				margin-right: 5px;
+			}
+		}
+	}
+	.comment-edit-link {
+		font-size: .75em;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		text-decoration: none;
 	}
 }
 
 .comment-content {
 	@extend .entry-content;
+	background-color: lighten($text, 70%);
+	padding: $tenpx;
+	position: relative;
+	&::before {
+		content: '\f0d8';
+		color: lighten($text, 70%);
+		font-family: fontawesome;
+		font-size: 30px;
+		position: absolute;
+		top: -28px;
+		left: 35px;
+	}
 }
 
 .comment-respond {
+	background-color: lighten($text, 100%);
+	padding: $spacer;
+	font-family: $OpenSans;
+	margin-bottom: $spacer;
 	.form-submit {
 		@extend %clearfix;
 	}
 	.comment-reply-title {
-		font-size: 1.2em;
-		margin-bottom: $tenpx;
+		@extend %comment-heading;
+		a {
+			@extend .btn;
+			font-size: .5em;
+			text-decoration: none;
+		}
+		small {
+			@extend %clearfix;
+			// display: block;
+		}
+	}
+}
+
+.comment-reply {
+	margin-top: $spacer;
+	a {
+		@extend .btn;
+		text-decoration: none;
 	}
 }
 
@@ -38,13 +118,40 @@
 	@extend %type;
 }
 
+.comment-form-comment {
+	color: lighten($text, 40%);
+	font-family: $OpenSans;
+	font-weight: 300;
+}
+
 .comment-notes,
 .logged-in-as,
 .form-allowed-tags,
 .comment-form-author,
 .comment-form-email,
 .comment-form-url {
+	@extend .comment-form-comment;
 }
 
-.comment-form-comment {
+.logged-in-as {
+	a {
+		color: $secondaryColor;
+		font-size: .8em;
+		text-decoration: none;
+	}
+}
+
+.entry-comments {
+	background-color: lighten($text, 100%);
+	padding: $spacer;
+	margin-bottom: $spacer;
+	h3 {
+		@extend %comment-heading;
+		&::before {
+			content: '\f086';
+			display: block;
+			font-family: fontawesome;
+			position: relative;
+		}
+	}
 }
