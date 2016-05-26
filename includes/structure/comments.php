@@ -24,7 +24,7 @@ if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  */
 // remove_action( 'genesis_after_entry', 'genesis_get_comments_template' );
 
-//* Modify the speak your mind title in comments
+// Modify the speak your mind title in comments
 add_filter( 'comment_form_defaults', 'sp_comment_form_defaults' );
 function sp_comment_form_defaults( $defaults ) {
 
@@ -33,7 +33,7 @@ function sp_comment_form_defaults( $defaults ) {
 
 }
 
-//* Modify comments title text in comments
+// Modify comments title text in comments
 add_filter( 'genesis_title_comments', 'sp_genesis_title_comments' );
 function sp_genesis_title_comments() {
 	$title = '<h3>Discussion</h3>';

@@ -105,6 +105,14 @@ function bfg_load_assets() {
  		null
  	);
 
+	// Add FontAwesome icons set
+	wp_enqueue_style(
+		'FontAwesome',
+		'https://use.fontawesome.com/c727f77d1f.css',
+		array(),
+		null
+	);
+
  	// Dequeue comment-reply if no active comments on page
 	if( ( is_single() || is_page() || is_attachment() ) && comments_open() & (int) get_option( 'thread_comments' ) === 1 && !is_front_page() ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -131,12 +139,18 @@ function bfg_load_assets() {
 		)
 	);
 	// wp_localize_script( 'bfg', 'ajax_object', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-	// Add FontAwesome icons set
-	wp_enqueue_style(
-		'FontAwesome',
-		'https://use.fontawesome.com/c727f77d1f.css', 
-		array(),
-		null);
+
+	// Backstrech jquery plugin
+	wp_enqueue_script( 'jquery-backstrecth', $stylesheet_dir . '/build/js/lib/jquery.backstretch.min.js', array('jquery'), '2.0.4', true );
+
+	$thumb_id = get_post_thumbnail_id();
+	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', false);
+	$thumb_url = $thumb_url_array[0];
+
+	$imagePath = has_post_thumbnail() ? $thumb_url : $stylesheet_dir . '/build/images/goer-02.jpg';
+
+	// wp_localize_script( 'bfg', 'backstretch_path', array( 'imgPath' => $stylesheet_dir . '/build/images/goer-02.jpg' ) );
+	wp_localize_script( 'bfg', 'backstretch_path', array( 'imgPath' => $imagePath ) );
 
 }
 

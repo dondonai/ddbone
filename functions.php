@@ -32,9 +32,11 @@ require_once CHILD_DIR . '/includes/structure/layout.php';
 require_once CHILD_DIR . '/includes/structure/loops.php';
 require_once CHILD_DIR . '/includes/structure/menu.php';
 require_once CHILD_DIR . '/includes/structure/post.php';
+require_once CHILD_DIR . '/includes/structure/page.php';
 require_once CHILD_DIR . '/includes/structure/schema.php';
 require_once CHILD_DIR . '/includes/structure/search.php';
 require_once CHILD_DIR . '/includes/structure/sidebar.php';
+// require_once CHILD_DIR . '/includes/structure/home.php';
 
 // Shame
 require_once CHILD_DIR . '/includes/shame.php';					// For new code snippets that haven't been sorted and commented yet

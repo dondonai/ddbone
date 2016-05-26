@@ -1,0 +1,31 @@
+.post__header {
+  height: 450px;
+  background-size: 100%;
+  background-position: center center;
+  position: relative;
+  .overlay {
+    background-color: rgba($masterColor, .5);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .breadcrumb,
+  .category--title {
+    background-color: rgba($masterColor, .7);
+    color: lighten($text, 70%);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    padding: $tenpx;
+    margin: 0;
+    z-index: 999;
+  }
+  a {
+    color: lighten($text, 100%);
+    text-decoration: none;
+  }
+}

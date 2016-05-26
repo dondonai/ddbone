@@ -48,7 +48,7 @@
 
 		> a {
 		}
-		&::after {
+		&:not(:last-child)::after {
 			content: "\f111";
 			color: $secondaryColor;
 			font-family: fontawesome;
@@ -57,12 +57,12 @@
 	    right: -5px;
 	    font-size: .1em;
 		}
-		&:last-child {
-			&::after {
-				// @extend &::after;
-				content: "";
-			}
-		}
+		// &:last-child {
+		// 	&::after {
+		// 		// @extend &::after;
+		// 		content: "";
+		// 	}
+		// }
 	}
 
 	// Sublevels

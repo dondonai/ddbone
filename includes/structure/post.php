@@ -31,7 +31,7 @@ add_filter( 'the_content_more_link', 'bfg_more_tag_excerpt_link' );
  */
 function bfg_more_tag_excerpt_link() {
 
-	return ' <a class="more-link" href="' . get_permalink() . '">' . __( 'Read more &rarr;', CHILD_THEME_TEXT_DOMAIN ) . '</a>';
+	return ' <a class="more-link" href="' . get_permalink() . '">' . __( 'Read more;', CHILD_THEME_TEXT_DOMAIN ) . '</a>';
 
 }
 
@@ -46,7 +46,7 @@ add_filter( 'get_the_content_more_link', 'bfg_truncated_excerpt_link' );
  */
 function bfg_truncated_excerpt_link() {
 
-	return '... <a class="more-link" href="' . get_permalink() . '">' . __( 'Read more &rarr;', CHILD_THEME_TEXT_DOMAIN ) . '</a>';
+	return '... <a class="more-link" href="' . get_permalink() . '">' . __( 'Read more', CHILD_THEME_TEXT_DOMAIN ) . '</a>';
 
 }
 
@@ -149,11 +149,43 @@ function bfg_password_form( $post = 0 ) {
 
 }
 
+// Add a post header from featured image
+add_action( 'genesis_after_header', 'bfg_post_featured_image_header' );
+function bfg_post_featured_image_header() {
+	if( is_single() ) {
+		if( has_post_thumbnail() ) {
+			?>
+			<div class="post__header" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>)">
+				<?php genesis_do_breadcrumbs(); ?>
+				<div class="overlay"></div>
+			</div>
 
+		<?php } else { ?>
+
+			<div class="post__header" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/build/images/goer-02.jpg)">
+				<?php genesis_do_breadcrumbs(); ?>
+				<div class="overlay"></div>
+			</div>
+
+		<?php }
+	}
+
+}
+
+remove_action('genesis_before_loop', 'bfg_do_breadcrumbs');
 
 // Customize the entry meta in the entry header (requires HTML5 theme support)
 add_filter( 'genesis_post_info', 'bfg_post_info_filter' );
 function bfg_post_info_filter($post_info) {
-	$post_info = '[post_author_posts_link] [post_date] &middot; [post_comments] [post_edit]';
+	$email = get_the_author_meta('user_email');
+	$post_info = get_avatar( $email, 25);
+	$post_info .= 'By [post_author_posts_link] &middot; [post_comments] [post_date] [post_edit]';
 	return $post_info;
+}
+
+// Customize the post meta function
+add_filter( 'genesis_post_meta', 'bfg_post_meta_filter' );
+function bfg_post_meta_filter($post_meta) {
+	$post_meta = '[post_tags before="Tagged: "]';
+	return $post_meta;
 }

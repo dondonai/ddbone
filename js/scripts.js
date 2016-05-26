@@ -41,3 +41,10 @@
 		grunticon([grunticon_paths.svg, grunticon_paths.png, grunticon_paths.fallback]);
 
 })( window.jQuery );
+
+
+jQuery(function($) {
+
+	$('.post__header').backstretch( backstretch_path.imgPath );
+
+});
