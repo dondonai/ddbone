@@ -1,7 +1,7 @@
 .author-box {
   @extend .entry;
   color: lighten($text, 50%);
-  font-family: $OpenSans;
+  font-family: $txtBody;
   img {
     display: block;
     border-radius: 50%;
@@ -28,7 +28,7 @@
       display: inline-block;
       a {
         color: lighten($text, 100%);
-        font-size: .8em;
+        font-size: .7em;
         font-weight: 700;
         padding: $tenpx / 2 $tenpx;
         text-decoration: none;

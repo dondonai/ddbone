@@ -37,6 +37,7 @@ require_once CHILD_DIR . '/includes/structure/schema.php';
 require_once CHILD_DIR . '/includes/structure/search.php';
 require_once CHILD_DIR . '/includes/structure/sidebar.php';
 // require_once CHILD_DIR . '/includes/structure/home.php';
+require_once CHILD_DIR . '/includes/structure/blog.php';
 
 // Shame
 require_once CHILD_DIR . '/includes/shame.php';					// For new code snippets that haven't been sorted and commented yet

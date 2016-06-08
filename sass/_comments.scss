@@ -85,7 +85,7 @@
 .comment-respond {
 	background-color: lighten($text, 100%);
 	padding: $spacer;
-	font-family: $OpenSans;
+	font-family: $txtBody;
 	margin-bottom: $spacer;
 	.form-submit {
 		@extend %clearfix;
@@ -120,7 +120,7 @@
 
 .comment-form-comment {
 	color: lighten($text, 40%);
-	font-family: $OpenSans;
+	font-family: $txtBody;
 	font-weight: 300;
 }
 

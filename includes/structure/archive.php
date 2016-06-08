@@ -14,6 +14,7 @@ function bfg_archive_featured_image_header() {
       ?>
       <div class="post__header" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>)">
         <h1 class="category--title" itemprop="headline"><?php single_cat_title(); ?></h1>
+        <?php genesis_do_taxonomy_title_description(); ?>
         <div class="overlay"></div>
       </div>
 
@@ -36,7 +37,10 @@ function bfg_archive_post_featured_image() {
   // }
 
   if( is_archive() ) :
-    if( has_post_thumbnail() ) : the_post_thumbnail( $post_id, 'full' );
+    if( has_post_thumbnail() ) :
+      ?>
+      <a href="<?php the_permalink(); ?> "><?php the_post_thumbnail( $post_id, 'full' ); ?></a>
+      <?php
     endif;
   endif;
 }

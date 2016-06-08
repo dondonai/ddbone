@@ -42,7 +42,7 @@
 		&.current-menu-item {
 			> a {
 				@extend a:hover;
-				box-shadow: 0 -2px 0 0 $masterColor inset;
+				// box-shadow: 0 -2px 0 0 $masterColor inset;
 			}
 		}
 
@@ -131,7 +131,7 @@
 .header-widget-area {
 	.genesis-nav-menu {
 		> .menu-item {
-			&::after {
+			&:not(:last-child)::after {
 				@extend .menu-item::after;
 				top: 30%;
 			}

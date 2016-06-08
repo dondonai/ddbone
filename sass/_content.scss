@@ -11,7 +11,7 @@
 
 .entry-title {
 	border-bottom: 1px solid lighten($text, 60%);
-	font-family: $Lato;
+	font-family: $txtHeading;
 	font-weight: 400;
 	font-size: 2.25em;
 	overflow: hidden;
@@ -29,18 +29,8 @@
 		}
 	}
 	.post__header & {
+		@extend %page-header;
 		border: none;
-		background-color: rgba($masterColor, .7);
-		color: lighten($text, 70%);
-		display: block;
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		text-align: center;
-		font-size: 1.5em;
-		padding: $tenpx;
-		margin: 0;
-		z-index: 999;
 	}
 }
 

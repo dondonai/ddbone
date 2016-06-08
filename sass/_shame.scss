@@ -10,19 +10,12 @@
     top: 0;
     width: 100%;
   }
-  .breadcrumb,
+  .breadcrumb {
+    @extend %page-header;
+    font-size: 2vw;
+  }
   .category--title {
-    background-color: rgba($masterColor, .7);
-    color: lighten($text, 70%);
-    display: block;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5em;
-    padding: $tenpx;
-    margin: 0;
-    z-index: 999;
+    @extend %page-header
   }
   a {
     color: lighten($text, 100%);

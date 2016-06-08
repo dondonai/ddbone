@@ -40,10 +40,30 @@
 %comment-heading {
 	color: lighten($text, 50%);
 	border-bottom: 1px solid lighten($text, 50%);
-	font-family: $Lato;
+	font-family: $txtHeading;
 	font-size: 2.2em;
 	font-weight: 300;
 	margin-bottom: $tenpx;
 	padding-bottom: $tenpx;
 	text-align: center;
+}
+
+%page-header {
+	// background-color: rgba($masterColor, .7);
+	color: lighten($text, 70%);
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	max-width: $site-width;
+	text-align: center;
+	text-shadow: -1px 2px 2px $text;
+	font-family: $txtHeading;
+	font-size: 3vw;
+	font-weight: 300;
+	padding: $tenpx;
+	margin: 0;
+	z-index: 999;
+	text-transform: capitalize;
 }

@@ -100,7 +100,7 @@ function bfg_load_assets() {
 	// Consider async loading: https://github.com/typekit/webfontloader
  	wp_enqueue_style(
  		'google-fonts',
- 		'//fonts.googleapis.com/css?family=Open+Sans:300,400,700|Lato:300,400,600.700',		// Open Sans (light, normal, and bold) and Lato regular, for example
+ 		'//fonts.googleapis.com/css?family=Open+Sans:300,400,700|Lato:300,400,600.700|Merriweather:300,400,700|Lustria:400',		// Open Sans (light, normal, and bold) and Lato regular, for example
  		array(),
  		null
  	);
@@ -141,7 +141,18 @@ function bfg_load_assets() {
 	// wp_localize_script( 'bfg', 'ajax_object', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
 	// Backstrech jquery plugin
-	wp_enqueue_script( 'jquery-backstrecth', $stylesheet_dir . '/build/js/lib/jquery.backstretch.min.js', array('jquery'), '2.0.4', true );
+	wp_enqueue_script(
+		'jquery-backstrecth',
+		$stylesheet_dir . '/includes/plugins/jquery.backstretch.min.js',
+		array('jquery'),
+		'2.0.4',
+		true
+	);
+
+	// jQuery Slick
+	wp_enqueue_script( 'slick', $stylesheet_dir . '/includes/plugins/slick/slick.min.js', array('jquery'), '1.6.0', true );
+	wp_enqueue_style( 'slick-css', $stylesheet_dir . '/includes/plugins/slick/slick.css', null, '1.6.0' );
+	// wp_enqueue_style( 'slick-theme', $stylesheet_dir . '/includes/plugins/slick/slick-theme.css', null, '1.6.0' );
 
 	$thumb_id = get_post_thumbnail_id();
 	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', false);

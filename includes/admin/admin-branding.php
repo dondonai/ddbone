@@ -132,7 +132,7 @@ add_filter( 'admin_footer_text', 'bfg_admin_footer_text' );
  */
 function bfg_admin_footer_text() {
 
-	$text = __( 'Built by <a href="%s" target="_blank">Nooovle &middot; dOndOnAi</a>', CHILD_THEME_TEXT_DOMAIN );
+	$text = __( 'Built by <a href="%s" target="_blank">dOndOnAi &middot; Nooovle</a>', CHILD_THEME_TEXT_DOMAIN );
 	$text = sprintf(
 		$text,
 		'http://nooovle.com'

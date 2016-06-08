@@ -23,6 +23,9 @@
 .content {
 	float: left;
 	width: $site-width - 25;
+	.full-width-content & {
+		width: 100%;
+	}
 }
 
 .sidebar-primary {

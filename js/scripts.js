@@ -45,6 +45,18 @@
 
 jQuery(function($) {
 
+	// Page header background
 	$('.post__header').backstretch( backstretch_path.imgPath );
+
+	// Home Slider
+	$('.slider').slick({
+		autoplay: true,
+		dots: true,
+		fade: true,
+	  infinite: true,
+	  speed: 800,
+	  slidesToShow: 1,
+	  adaptiveHeight: true
+	});
 
 });

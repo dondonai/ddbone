@@ -6,7 +6,8 @@ body {
 body {
 	background-color: $bgBody;
 	color: $text;
-	font-family: $sans;
+	// font-family: $sans;
+	font-family: $txtBody;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
@@ -19,7 +20,7 @@ body {
 
 a {
 	color: $link;
-	font-family: $Lato;
+	font-family: $txtHeading;
 	text-decoration: underline;
 	transition: all .1s ease-in-out;
 
