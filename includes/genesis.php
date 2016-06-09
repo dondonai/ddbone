@@ -228,3 +228,4 @@ function bfg_maybe_disable_genesis_seo() {
  */
 // add_filter( 'genesis_pre_get_option_semantic_headings', '__return_true' );
 
+add_image_size( 'home-featured', 400, 200, array('left', 'top') );

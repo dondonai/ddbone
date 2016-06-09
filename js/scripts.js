@@ -51,7 +51,7 @@ jQuery(function($) {
 	// Home Slider
 	$('.slider').slick({
 		autoplay: true,
-		dots: true,
+		dots: false,
 		fade: true,
 	  infinite: true,
 	  speed: 800,

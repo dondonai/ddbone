@@ -37,3 +37,29 @@ function bfg_remove_recent_comments_widget_styles() {
 	}
 
 }
+
+// Register widgets
+genesis_register_sidebar( array(
+	'id' => 'home-featured-1',
+	'name' => 'Home Featured Left',
+));
+
+genesis_register_sidebar( array(
+	'id' => 'home-featured-2',
+	'name' => 'Home Featured Center',
+));
+
+genesis_register_sidebar( array(
+	'id' => 'home-featured-3',
+	'name' => 'Home Featured Right',
+));
+
+genesis_register_sidebar( array(
+	'id' => 'call-to-action',
+	'name' => 'Call to Action'
+));
+
+genesis_register_sidebar( array(
+	'id' => 'home-blog',
+	'name' => 'Home Blog Items'
+));

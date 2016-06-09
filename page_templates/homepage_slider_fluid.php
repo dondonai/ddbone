@@ -20,6 +20,7 @@ remove_action( 'genesis_loop', 'genesis_do_loop' );
 
 add_action( 'genesis_after_header', 'bfg_home_slider' );
 add_action( 'genesis_loop', 'bfg_home_featured' );
+add_action( 'genesis_before_footer', 'bfg_before_footer' );
 
 function bfg_home_slider() {
   ?>
@@ -33,10 +34,6 @@ function bfg_home_slider() {
             $title = get_sub_field('title');
             $description = get_sub_field('description');
             $link = get_sub_field('url');
-// echo '<pre>';
-// print_r( get_sub_field('url')  );
-// echo '</pre>';
-// die;
           ?>
           <div class="slider__item">
               <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
@@ -62,16 +59,79 @@ function bfg_home_slider() {
     </div>
   </section>
   <!-- Slider end -->
+  <?php
+  if( have_rows('hero') ) :
+    while( have_rows('hero') ) : the_row();
+      // var
+      $heroHeading = get_sub_field('hero_heading');
+      $heroMessage = get_sub_field('hero_message');
+  ?>
 
-  <section class="home__welcome">
-    <h4 class="welcome--header"></h4>
-    <div class="welcome--content"></div>
-  </section>
+    <section class="home__hero">
+      <div class="wrap">
+        <?php if( $heroHeading ) : ?>
+          <h4 class="hero--heading"><?php echo $heroHeading; ?></h4>
+        <?php endif; ?>
+        <?php if( $heroMessage ) : ?>
+          <div class="hero--message"><?php echo $heroMessage; ?></div>
+        <?php endif; ?>
+      </div>
+    </section>
+
+  <?php
+      wp_reset_postdata();
+    endwhile;
+  endif;
+  ?>
   <?php
 }
 
 function bfg_home_featured() {
-  echo 'Hey';
+
+  echo '<section class="home__featured">';
+
+  genesis_widget_area( 'home-featured-1', array(
+    'before' => '<div class="home__featured--left widget-area one-third first">',
+    'after' => '</div>'
+  ));
+
+  genesis_widget_area( 'home-featured-2', array(
+    'before' => '<div class="home__featured--center widget-area one-third">',
+    'after' => '</div>'
+  ));
+
+  genesis_widget_area( 'home-featured-3', array(
+    'before' => '<div class="home__featured--right widget-area one-third">',
+    'after' => '</div>'
+  ));
+
+  echo '</section>';
+}
+
+function bfg_before_footer() {
+  ?>
+  <section class="home__callToAction">
+    <div class="wrap">
+      <?php
+        genesis_widget_area( 'call-to-action', array(
+          'before' => '<div class="call-to-action widget-area">',
+          'after' => '</div>'
+        ));
+      ?>
+    </div>
+  </section>
+
+  <section class="home__blog">
+    <div class="wrap">
+      <?php
+        genesis_widget_area( 'home-blog', array(
+          'before' => '<div class="home__blog--items widget-area">',
+          'after' => '</div>'
+        ));
+      ?>
+    </div>
+  </section>
+  <?php
 }
 
 genesis();

@@ -253,5 +253,10 @@ $slick-opacity-not-active: 0.25 !default;
   }
   .btn.more--details {
     box-shadow: 0 15px 10px -10px rgba($text, .8);
+    position: relative;
+    &:active {
+      box-shadow: 0 2px 2px 0px rgba(51, 51, 51, 0.8);
+      top: 2px;
+    }
   }
 }

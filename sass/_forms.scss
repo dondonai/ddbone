@@ -80,3 +80,31 @@ input[type='search'] {
 		flex: 1;
 	}
 }
+
+// Genesis Enews Extended
+.home__callToAction {
+	background: lighten( $masterColor, 10% );
+	box-shadow: 0 2px 20px -2px rgba($text, .6);
+	color: lighten( $text, 100% );
+	padding: 40px 20px;
+	text-align: center;
+
+	form {
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		width: 960px;
+	}
+	input[type="email"],
+	input[type="submit"] {
+		flex: 1;
+		margin-right: 5px;
+		width: 45%;
+	}
+	input[type="submit"] {
+		text-transform: uppercase;
+	}
+	p {
+		font-size: 1.5em;
+	}
+}
